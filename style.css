@@ -1,0 +1,356 @@
+:root {
+    --color-primary: #0070c9; /* Apple-szerű kék a linkekhez, gombokhoz */
+    --color-primary-dark: #005aa3; /* Sötétebb kék hoverre */
+    --color-text-dark: #1d1d1f; /* Fekete/sötétszürke szöveg */
+    --color-text-light: #f5f5f7; /* Világos szöveg sötét háttéren */
+    --color-background-light: #ffffff; /* Fő háttér */
+    --color-background-dark: #161617; /* Sötét háttér (pl. footer) */
+    --color-card-bg: #f5f5f7; /* Kártyák háttérszíne, világosszürke */
+    --color-border: #d2d2d7; /* Finom szürke szegélyek */
+    --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.08); /* Nagyon finom árnyék */
+    --shadow-medium: 0 2px 8px rgba(0, 0, 0, 0.1); /* Kiemeltebb árnyék */
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: var(--color-background-light);
+    color: var(--color-text-dark);
+    scroll-behavior: smooth;
+    font-size: 17px; /* Kicsit nagyobb alap betűméret */
+}
+
+.container {
+    max-width: 980px; /* Apple.com szélesség inspiráció */
+    margin: 0 auto;
+    padding: 0 24px; /* Kicsit több padding oldalt */
+}
+
+/* Header */
+.site-header {
+    background: var(--color-background-light);
+    color: var(--color-text-dark);
+    padding: 24px 0;
+    text-align: center;
+    border-bottom: 1px solid var(--color-border);
+    position: sticky; /* Sticky header */
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-subtle);
+}
+
+.site-header h1 {
+    margin: 0 0 8px 0;
+    font-size: 38px; /* Nagyobb cím */
+    font-weight: 700;
+    letter-spacing: -0.02em; /* Apple-szerű betűtávolság */
+}
+
+.site-header p {
+    font-size: 19px;
+    color: var(--color-text-dark);
+    opacity: 0.8;
+}
+
+/* Navigation */
+.main-nav {
+    background: var(--color-background-light);
+    border-bottom: 1px solid var(--color-border);
+    padding: 12px 0;
+    box-shadow: var(--shadow-subtle);
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main-nav ul li {
+    margin: 0 20px; /* Nagyobb távolság a menüpontok között */
+}
+
+.nav-button {
+    color: var(--color-text-dark);
+    text-decoration: none;
+    padding: 8px 0;
+    border-bottom: 2px solid transparent; /* Finom aláhúzás effekt */
+    transition: color 0.3s ease, border-color 0.3s ease;
+    font-weight: 400; /* Apple-szerű vékonyabb betűtípus */
+    font-size: 17px;
+}
+
+.nav-button:hover {
+    color: var(--color-primary); /* Kékre vált hoverre */
+    border-color: var(--color-primary);
+}
+
+/* Main Content Area */
+.content-area {
+    padding: 60px 0; /* Nagyobb padding fent és lent */
+}
+
+section {
+    margin-bottom: 60px; /* Nagyobb térköz szekciók között */
+}
+
+h2 {
+    font-size: 32px;
+    color: var(--color-text-dark);
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+h2::after { /* Nincs alsó vonal, tisztább hatás */
+    display: none;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: var(--color-background-light); /* Egyszerű, fehér háttér */
+    color: var(--color-text-dark);
+    border-radius: 12px;
+    margin-bottom: 60px;
+    box-shadow: none; /* Nincs shadow, nagyon letisztult */
+}
+
+.hero-section h2 {
+    color: var(--color-text-dark);
+    font-size: 48px; /* Még nagyobb cím */
+    margin-bottom: 24px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+}
+
+.hero-section p {
+    font-size: 21px;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    line-height: 1.5;
+    color: var(--color-text-dark);
+    opacity: 0.9;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 14px 28px;
+    border-radius: 999px; /* Lekerekített gomb */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Finomabb árnyék */
+}
+
+.cta-button:hover {
+    background: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Grid (Kategória oldalakhoz és kiemelt termékekhez) */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px; /* Nagyobb térköz a kártyák között */
+    justify-content: center;
+}
+
+.product-card {
+    background: var(--color-card-bg);
+    border-radius: 12px;
+    box-shadow: var(--shadow-subtle);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Simább animáció */
+    padding: 30px; /* Nagyobb padding a kártyákon belül */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px; /* Kicsit nagyobb képméret */
+    object-fit: contain;
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--color-border); /* Finom elválasztó */
+    padding-bottom: 25px;
+}
+
+.product-card h3 {
+    font-size: 22px;
+    color: var(--color-text-dark);
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.product-description {
+    font-size: 16px;
+    color: var(--color-text-dark);
+    opacity: 0.7;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    line-height: 1.5;
+}
+
+.product-price {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-primary); /* Kék az áraknak */
+    margin-bottom: 20px;
+    display: block;
+    letter-spacing: -0.01em;
+}
+
+.details-button {
+    display: inline-block;
+    background: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 12px 25px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.details-button:hover {
+    background: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
+.site-footer {
+    background: var(--color-background-dark); /* Sötét footer */
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 60px;
+    box-shadow: 0 -2px 10px var(--shadow-medium);
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 15px;
+    opacity: 0.7;
+}
+
+/* Reszponzivitás (finomhangolva az új designhoz) */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .site-header h1 {
+        font-size: 32px;
+    }
+
+    .site-header p {
+        font-size: 17px;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .main-nav ul li {
+        margin: 0;
+    }
+
+    .nav-button {
+        display: block;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .hero-section {
+        padding: 60px 15px;
+    }
+
+    .hero-section h2 {
+        font-size: 38px;
+    }
+
+    .hero-section p {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card {
+        padding: 25px;
+    }
+
+    .product-image {
+        height: 160px;
+    }
+
+    .product-card h3 {
+        font-size: 20px;
+    }
+
+    .product-price {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-header h1 {
+        font-size: 28px;
+    }
+
+    .site-header p {
+        font-size: 16px;
+    }
+
+    .hero-section h2 {
+        font-size: 30px;
+    }
+
+    .hero-section p {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+
+    .details-button {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+}
