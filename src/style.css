@@ -1,7 +1,51 @@
 @import "tailwindcss";
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    data-theme: dark;
-  }
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+:root {
+    --bg-primary: 255 255 255;
+    --bg-secondary: 240 240 240;
+    --text-primary: 3 7 18;
+    --text-secondary: 107 114 128;
+    --border-color: 229 231 235;
+    --accent: 37 99 235;
+}
+
+[data-theme="dark"] {
+    --bg-primary: 17 24 39;
+    --bg-secondary: 31 41 55;
+    --text-primary: 255 255 255;
+    --text-secondary: 156 163 175;
+    --border-color: 55 65 81;
+    --accent: 59 130 246;
+}
+
+body {
+    background-color: rgb(var(--bg-primary));
+    color: rgb(var(--text-primary));
+}
+
+.bg-primary {
+    background-color: rgb(var(--bg-primary));
+}
+.bg-secondary {
+    background-color: rgb(var(--bg-secondary));
+}
+.text-primary {
+    color: rgb(var(--text-primary));
+}
+.text-secondary {
+    color: rgb(var(--text-secondary));
+}
+.border-custom {
+    border-color: rgb(var(--border-color));
+}
+.accent {
+    color: rgb(var(--accent));
+}
+.accent-bg {
+    background-color: rgb(var(--accent));
+}
+.accent-hover:hover {
+    background-color: rgb(var(--accent));
 }

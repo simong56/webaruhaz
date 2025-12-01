@@ -5,55 +5,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>iPhone Adás-Vétel - Prémium Használt Apple Termékek</title>
         <link rel="stylesheet" href="src/style.css" />
-        <style>
-            :root {
-                --bg-primary: 255 255 255;
-                --bg-secondary: 240 240 240;
-                --text-primary: 3 7 18;
-                --text-secondary: 107 114 128;
-                --border-color: 229 231 235;
-                --accent: 37 99 235;
-            }
 
-            [data-theme="dark"] {
-                --bg-primary: 17 24 39;
-                --bg-secondary: 31 41 55;
-                --text-primary: 255 255 255;
-                --text-secondary: 156 163 175;
-                --border-color: 55 65 81;
-                --accent: 59 130 246;
+        <script>
+            // ha a böngésző sötét módot használ:
+            if (
+                window.matchMedia &&
+                window.matchMedia("(prefers-color-scheme: dark)").matches
+            ) {
+                document.documentElement.setAttribute("data-theme", "dark");
             }
-
-            body {
-                background-color: rgb(var(--bg-primary));
-                color: rgb(var(--text-primary));
-            }
-
-            .bg-primary {
-                background-color: rgb(var(--bg-primary));
-            }
-            .bg-secondary {
-                background-color: rgb(var(--bg-secondary));
-            }
-            .text-primary {
-                color: rgb(var(--text-primary));
-            }
-            .text-secondary {
-                color: rgb(var(--text-secondary));
-            }
-            .border-custom {
-                border-color: rgb(var(--border-color));
-            }
-            .accent {
-                color: rgb(var(--accent));
-            }
-            .accent-bg {
-                background-color: rgb(var(--accent));
-            }
-            .accent-hover:hover {
-                background-color: rgb(var(--accent));
-            }
-        </style>
+            window
+                .matchMedia("(prefers-color-scheme: dark)")
+                .addEventListener("change", (e) => {
+                    document.documentElement.setAttribute(
+                        "data-theme",
+                        e.matches ? "dark" : "light",
+                    );
+                });
+        </script>
     </head>
     <body class="font-sans antialiased bg-primary text-primary">
         <header
@@ -147,7 +116,7 @@
                         <h3 class="text-2xl font-semibold mb-2">
                             iPhone 14 Pro (használt)
                         </h3>
-                        <p class="text-base mb-4 flex-grow text-secondary">
+                        <p class="text-base mb-4 grow text-secondary">
                             Kiváló állapot, 128GB, akkumulátor: 95%.
                         </p>
                         <span class="text-3xl font-bold accent mb-6 block"
@@ -168,7 +137,7 @@
                             class="w-48 h-48 object-contain mb-6 pb-6 border-b border-custom"
                         />
                         <h3>AirPods Pro Gen 2</h3>
-                        <p class="text-base mb-4 flex-grow text-secondary">
+                        <p class="text-base mb-4 grow text-secondary">
                             Aktív zajszűrés, átlátszó mód, újszerű állapot.
                         </p>
                         <span class="text-3xl font-bold accent mb-6 block"
