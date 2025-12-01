@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="hu" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telefontokok - TechTomi</title>
+    <link rel="stylesheet" href="../src/style.css">
+    <script>
+        // ha a böngésző sötét módot használ:
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+              document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+        });
+    </script>
+</head>
+<body class="font-sans antialiased bg-bg-primary text-text-primary">
+    <header class="bg-bg-primary text-text-primary py-6 text-center border-b border-text-secondary sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h1 class="text-4xl font-bold tracking-tight mb-2">Telefontokok</h1>
+            <p class="text-lg text-text-secondary opacity-90">Védje iPhone-ját stílusosan és biztonságosan.</p>
+        </div>
+    </header>
+
+    <nav class="border-b border-text-secondary py-3 shadow-sm">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <ul class="flex justify-center flex-wrap gap-x-8 gap-y-2">
+                <li><a href="../index.html" class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap">Főoldal</a></li>
+                <li>
+                    <a
+                        href="telefonok.html"
+                        class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
+                        >Használt iPhone-ok</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="toltok.html"
+                        class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
+                        >Töltők és Kábelek</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="tokok.html"
+                        class="text-lg font-normal py-2 border-b-2 border-accent text-accent transition duration-300 whitespace-nowrap"
+                        >Telefontokok</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="airpods.html"
+                        class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
+                        >AirPods</a
+                    >
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-6 max-w-4xl py-16">
+        <h2 class="text-3xl font-semibold text-center mb-10 tracking-tight text-text-primary">Elérhető telefontokok</h2>
+        <div class="flex flex-col gap-8 justify-center items-center max-w-md mx-auto">
+            <!-- MagSafe szilikon tok -->
+            <div class="bg-bg-secondary rounded-xl shadow-sm p-8 flex flex-col items-center text-center">
+                <img src="https://lipsum.app/640x480/" alt="tok #1" class="w-48 h-48 object-contain mb-6 pb-6 border-b border-text-secondary">
+                <h3 class="text-2xl font-semibold text-text-primary mb-2">tok #1</h3>
+                <p class="text-text-secondary text-base mb-4 grow">eleg tok</p>
+                <span class="text-3xl font-bold text-accent mb-6 block">67 Ft</span>
+                <a href="#" class="inline-block bg-accent text-white font-medium px-6 py-3 rounded-full transform hover:-translate-y-0.5 transition duration-300 shadow-md">Részletek</a>
+            </div>
+        </div>
+    </main>
+
+<footer class="bg-secondary text-text-primary text-center py-10 mt-16 shadow-lg">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <p class="text-sm text-text-secondary opacity-80">&copy; 2025 TechTomi. Minden jog fenntartva.</p>
+        </div>
+    </footer>
+</body>
+</html>
