@@ -1,27 +1,60 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="hu" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AirPods - iPhone Adás-Vétel</title>
     <link rel="stylesheet" href="src/style.css">
+    <style>
+        :root {
+            --bg-primary: 255 255 255;
+            --bg-secondary: 249 250 251;
+            --text-primary: 3 7 18;
+            --text-secondary: 107 114 128;
+            --border-color: 229 231 235;
+            --accent: 37 99 235;
+        }
+        
+        [data-theme="dark"] {
+            --bg-primary: 17 24 39;
+            --bg-secondary: 31 41 55;
+            --text-primary: 255 255 255;
+            --text-secondary: 156 163 175;
+            --border-color: 55 65 81;
+            --accent: 59 130 246;
+        }
+        
+        body {
+            background-color: rgb(var(--bg-primary));
+            color: rgb(var(--text-primary));
+        }
+        
+        .bg-primary { background-color: rgb(var(--bg-primary)); }
+        .bg-secondary { background-color: rgb(var(--bg-secondary)); }
+        .text-primary { color: rgb(var(--text-primary)); }
+        .text-secondary { color: rgb(var(--text-secondary)); }
+        .border-custom { border-color: rgb(var(--border-color)); }
+        .accent { color: rgb(var(--accent)); }
+        .accent-bg { background-color: rgb(var(--accent)); }
+        .accent-hover:hover { background-color: rgb(var(--accent)); }
+    </style>
 </head>
-<body class="font-sans antialiased text-gray-800 bg-white">
-    <header class="bg-white text-gray-800 py-6 text-center border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+<body class="font-sans antialiased bg-primary text-primary">
+    <header class="bg-primary text-primary py-6 text-center border-b border-custom sticky top-0 z-50 shadow-sm">
         <div class="container mx-auto px-6 max-w-4xl">
             <h1 class="text-4xl font-bold tracking-tight mb-2">AirPods</h1>
-            <p class="text-lg text-gray-700 opacity-90">Merüljön el a tiszta hangzás világában az Apple AirPods-szal.</p>
+            <p class="text-lg text-secondary opacity-90">Merüljön el a tiszta hangzás világában az Apple AirPods-szal.</p>
         </div>
     </header>
 
-    <nav class="bg-white border-b border-gray-200 py-3 shadow-sm">
+    <nav class="bg-primary border-b border-custom py-3 shadow-sm">
         <div class="container mx-auto px-6 max-w-4xl">
             <ul class="flex justify-center flex-wrap gap-x-8 gap-y-2">
-                <li><a href="index.html" class="text-gray-800 text-lg font-normal py-2 border-b-2 border-transparent hover:text-blue-600 hover:border-blue-600 transition duration-300 whitespace-nowrap">Főoldal</a></li>
-                <li><a href="hasznalt_telefonok.html" class="text-gray-800 text-lg font-normal py-2 border-b-2 border-transparent hover:text-blue-600 hover:border-blue-600 transition duration-300 whitespace-nowrap">Használt iPhone-ok</a></li>
-                <li><a href="toltok.html" class="text-gray-800 text-lg font-normal py-2 border-b-2 border-transparent hover:text-blue-600 hover:border-blue-600 transition duration-300 whitespace-nowrap">Töltők és Kábelek</a></li>
-                <li><a href="telefontokok.html" class="text-gray-800 text-lg font-normal py-2 border-b-2 border-transparent hover:text-blue-600 hover:border-blue-600 transition duration-300 whitespace-nowrap">Telefontokok</a></li>
-                <li><a href="airpods.html" class="text-gray-800 text-lg font-normal py-2 border-b-2 border-blue-600 text-blue-600 whitespace-nowrap">AirPods</a></li>
+<li><a href="index.html" class="text-primary text-lg font-normal py-2 border-b-2 border-transparent hover:accent hover:border-accent transition duration-300 whitespace-nowrap">Főoldal</a></li>
+                <li><a href="hasznalt_telefonok.html" class="text-primary text-lg font-normal py-2 border-b-2 border-transparent hover:accent hover:border-accent transition duration-300 whitespace-nowrap">Használt iPhone-ok</a></li>
+                <li><a href="toltok.html" class="text-primary text-lg font-normal py-2 border-b-2 border-transparent hover:accent hover:border-accent transition duration-300 whitespace-nowrap">Töltők és Kábelek</a></li>
+                <li><a href="telefontokok.html" class="text-primary text-lg font-normal py-2 border-b-2 border-transparent hover:accent hover:border-accent transition duration-300 whitespace-nowrap">Telefontokok</a></li>
+                <li><a href="airpods.html" class="text-primary text-lg font-normal py-2 border-b-2 border-accent accent whitespace-nowrap">AirPods</a></li>
             </ul>
         </div>
     </nav>
@@ -30,27 +63,27 @@
         <h2 class="text-3xl font-semibold text-center mb-10 tracking-tight">Elérhető AirPods Modellek</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center">
             <!-- AirPods Pro Gen 2 -->
-            <div class="bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-8 flex flex-col items-center text-center transform hover:-translate-y-1">
-                <img src="https://via.placeholder.com/150x150?text=AirPods+Pro+Gen+2" alt="AirPods Pro Gen 2" class="w-48 h-48 object-contain mb-6 pb-6 border-b border-gray-200">
-                <h3 class="text-2xl font-semibold text-gray-800 mb-2">AirPods Pro (2. generációs)</h3>
-                <p class="text-gray-600 text-base mb-4 flex-grow">Aktív zajszűrés, adaptív átlátszó mód, MagSafe töltőtok. Újszerű állapot, tartozékokkal.</p>
-                <span class="text-3xl font-bold text-blue-600 mb-6 block">74.990 Ft</span>
-                <a href="#" class="inline-block bg-blue-600 text-white font-medium px-6 py-3 rounded-full hover:bg-blue-700 transform hover:-translate-y-0.5 transition duration-300 shadow-md">Részletek</a>
+            <div class="bg-secondary rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-8 flex flex-col items-center text-center transform hover:-translate-y-1">
+                <img src="https://via.placeholder.com/150x150?text=AirPods+Pro+Gen+2" alt="AirPods Pro Gen 2" class="w-48 h-48 object-contain mb-6 pb-6 border-b border-custom">
+                <h3 class="text-2xl font-semibold text-primary mb-2">AirPods Pro (2. generációs)</h3>
+                <p class="text-secondary text-base mb-4 flex-grow">Aktív zajszűrés, adaptív átlátszó mód, MagSafe töltőtok. Újszerű állapot, tartozékokkal.</p>
+                <span class="text-3xl font-bold accent mb-6 block">74.990 Ft</span>
+                <a href="#" class="inline-block accent-bg text-white font-medium px-6 py-3 rounded-full accent-hover transform hover:-translate-y-0.5 transition duration-300 shadow-md">Részletek</a>
             </div>
             <!-- AirPods Gen 3 -->
-            <div class="bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-8 flex flex-col items-center text-center transform hover:-translate-y-1">
-                <img src="https://via.placeholder.com/150x150?text=AirPods+Gen+3" alt="AirPods (3. generációs)" class="w-48 h-48 object-contain mb-6 pb-6 border-b border-gray-200">
-                <h3 class="text-2xl font-semibold text-gray-800 mb-2">AirPods (3. generációs)</h3>
-                <p class="text-gray-600 text-base mb-4 flex-grow">Térbeli hangzás, MagSafe töltőtok. Kitűnő állapotban, keveset használt.</p>
-                <span class="text-3xl font-bold text-blue-600 mb-6 block">54.990 Ft</span>
-                <a href="#" class="inline-block bg-blue-600 text-white font-medium px-6 py-3 rounded-full hover:bg-blue-700 transform hover:-translate-y-0.5 transition duration-300 shadow-md">Részletek</a>
+            <div class="bg-secondary rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-8 flex flex-col items-center text-center transform hover:-translate-y-1">
+                <img src="https://via.placeholder.com/150x150?text=AirPods+Gen+3" alt="AirPods (3. generációs)" class="w-48 h-48 object-contain mb-6 pb-6 border-b border-custom">
+                <h3 class="text-2xl font-semibold text-primary mb-2">AirPods (3. generációs)</h3>
+                <p class="text-secondary text-base mb-4 flex-grow">Térbeli hangzás, MagSafe töltőtok. Kitűnő állapotban, keveset használt.</p>
+                <span class="text-3xl font-bold accent mb-6 block">54.990 Ft</span>
+                <a href="#" class="inline-block accent-bg text-white font-medium px-6 py-3 rounded-full accent-hover transform hover:-translate-y-0.5 transition duration-300 shadow-md">Részletek</a>
             </div>
         </div>
     </main>
 
-    <footer class="bg-gray-900 text-gray-200 text-center py-10 mt-16 shadow-lg">
+<footer class="bg-secondary text-primary text-center py-10 mt-16 shadow-lg">
         <div class="container mx-auto px-6 max-w-4xl">
-            <p class="text-sm opacity-80">&copy; 2025 iPhone Adás-Vétel. Minden jog fenntartva.</p>
+            <p class="text-sm text-secondary opacity-80">&copy; 2025 iPhone Adás-Vétel. Minden jog fenntartva.</p>
         </div>
     </footer>
 </body>

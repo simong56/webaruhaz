@@ -1,62 +1,195 @@
-<!DOCTYPE html>
-<html lang="hu" data-theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iPhone Adás-Vétel - Prémium Használt Apple Termékek</title>
-    <link rel="stylesheet" href="src/style.css">
-</head>
-<body class="font-sans antialiased bg-white text-gray-950 dark:text-white dark:bg-gray-900">
-    <header class="py-6 text-center border-b border-gray-200 bg-white dark:bg-gray-900 sticky top-0 z-50 shadow-sm">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <h1 class="text-4xl font-bold tracking-tight mb-2">Üdvözöljük az iPhone Adás-Vételnél!</h1>
-            <p class="text-lg opacity-90">Minőségi használt iPhone-ok, kiegészítők és töltők egy helyen.</p>
-        </div>
-    </header>
+<!doctype html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>iPhone Adás-Vétel - Prémium Használt Apple Termékek</title>
+        <link rel="stylesheet" href="src/style.css" />
+        <style>
+            :root {
+                --bg-primary: 255 255 255;
+                --bg-secondary: 240 240 240;
+                --text-primary: 3 7 18;
+                --text-secondary: 107 114 128;
+                --border-color: 229 231 235;
+                --accent: 37 99 235;
+            }
 
-    <nav class="border-b border-gray-200 py-3 shadow-sm">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <ul class="flex justify-center flex-wrap gap-x-8 gap-y-2">
-                <li><a href="hasznalt_telefonok.html" class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-blue-600 hover:border-blue-600 transition duration-300 whitespace-nowrap">Használt iPhone-ok</a></li>
-                <li><a href="toltok.html" class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-blue-600 hover:border-blue-600 transition duration-300 whitespace-nowrap">Töltők és Kábelek</a></li>
-                <li><a href="telefontokok.html" class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-blue-600 hover:border-blue-600 transition duration-300 whitespace-nowrap">Telefontokok</a></li>
-                <li><a href="airpods.html" class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-blue-600 hover:border-blue-600 transition duration-300 whitespace-nowrap">AirPods</a></li>
-            </ul>
-        </div>
-    </nav>
+            [data-theme="dark"] {
+                --bg-primary: 17 24 39;
+                --bg-secondary: 31 41 55;
+                --text-primary: 255 255 255;
+                --text-secondary: 156 163 175;
+                --border-color: 55 65 81;
+                --accent: 59 130 246;
+            }
 
-    <main class="container mx-auto px-6 max-w-4xl py-16">
-        <section class="text-center pb-16">
-            <h2 class="text-5xl font-bold tracking-tight mb-6 leading-tight">Keresse meg álmai iPhone-ját vagy a tökéletes kiegészítőt!</h2>
-            <p class="text-xl max-w-2xl mx-auto mb-10 leading-relaxed opacity-90">Szakértelmünkkel és széles választékunkkal garantáljuk, hogy megtalálja a tökéletes Apple terméket. Minden termékünket alaposan ellenőrizzük, hogy csak a legjobb minőségű termékeket kínálhassuk Önnek.</p>
-            <a href="hasznalt_telefonok.html" class="inline-block bg-blue-600 text-lg font-semibold px-8 py-3 rounded-full hover:bg-blue-700 transform hover:-translate-y-0.5 transition duration-300 shadow-lg hover:shadow-xl">Fedezze fel kínálatunkat!</a>
-        </section>
+            body {
+                background-color: rgb(var(--bg-primary));
+                color: rgb(var(--text-primary));
+            }
 
-        <section class="pb-16">
-            <h2 class="text-3xl font-semibold text-center mb-10 tracking-tight">Kiemelt ajánlataink</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center">
-                <div class="rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-8 flex flex-col items-center text-center transform hover:-translate-y-1">
-                    <img src="https://via.placeholder.com/150x150?text=iPhone+14" alt="iPhone 14 Pro" class="w-48 h-48 object-contain mb-6 pb-6 border-b border-gray-200">
-                    <h3 class="text-2xl font-semibold mb-2">iPhone 14 Pro (használt)</h3>
-                    <p class="text-base mb-4 flex-grow">Kiváló állapot, 128GB, akkumulátor: 95%.</p>
-                    <span class="text-3xl font-bold text-blue-600 mb-6 block">289.990 Ft</span>
-                    <a href="hasznalt_telefonok.html" class="inline-block bg-blue-600 font-medium px-6 py-3 rounded-full hover:bg-blue-700 transform hover:-translate-y-0.5 transition duration-300 shadow-md">Részletek</a>
-                </div>
-                <div class="rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-8 flex flex-col items-center text-center transform hover:-translate-y-1">
-                    <img src="https://via.placeholder.com/150x150?text=AirPods+Pro+2" alt="AirPods Pro Gen 2" class="w-48 h-48 object-contain mb-6 pb-6 border-b border-gray-200">
-                    <h3>AirPods Pro Gen 2</h3>
-                    <p class="text-base mb-4 flex-grow">Aktív zajszűrés, átlátszó mód, újszerű állapot.</p>
-                    <span class="text-3xl font-bold text-blue-600 mb-6 block">74.990 Ft</span>
-                    <a href="airpods.html" class="inline-block bg-blue-600 font-medium px-6 py-3 rounded-full hover:bg-blue-700 transform hover:-translate-y-0.5 transition duration-300 shadow-md">Részletek</a>
-                </div>
+            .bg-primary {
+                background-color: rgb(var(--bg-primary));
+            }
+            .bg-secondary {
+                background-color: rgb(var(--bg-secondary));
+            }
+            .text-primary {
+                color: rgb(var(--text-primary));
+            }
+            .text-secondary {
+                color: rgb(var(--text-secondary));
+            }
+            .border-custom {
+                border-color: rgb(var(--border-color));
+            }
+            .accent {
+                color: rgb(var(--accent));
+            }
+            .accent-bg {
+                background-color: rgb(var(--accent));
+            }
+            .accent-hover:hover {
+                background-color: rgb(var(--accent));
+            }
+        </style>
+    </head>
+    <body class="font-sans antialiased bg-primary text-primary">
+        <header
+            class="py-6 text-center border-b border-custom bg-primary sticky top-0 z-50 shadow-sm"
+        >
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h1 class="text-4xl font-bold tracking-tight mb-2">
+                    Üdvözöljük az iPhone Adás-Vételnél!
+                </h1>
+                <p class="text-lg text-secondary opacity-90">
+                    Minőségi használt iPhone-ok, kiegészítők és töltők egy
+                    helyen.
+                </p>
             </div>
-        </section>
-    </main>
+        </header>
 
-    <footer class="text-center py-10 mt-16 shadow-lg">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <p class="text-sm opacity-80">&copy; 2025 iPhone Adás-Vétel. Minden jog fenntartva.</p>
-        </div>
-    </footer>
-</body>
+        <nav class="border-b border-custom py-3 shadow-sm">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <ul class="flex justify-center flex-wrap gap-x-8 gap-y-2">
+                    <li>
+                        <a
+                            href="hasznalt_telefonok.html"
+                            class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-blue-600 hover:border-blue-600 transition duration-300 whitespace-nowrap"
+                            >Használt iPhone-ok</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="toltok.html"
+                            class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-blue-600 hover:border-blue-600 transition duration-300 whitespace-nowrap"
+                            >Töltők és Kábelek</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="telefontokok.html"
+                            class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-blue-600 hover:border-blue-600 transition duration-300 whitespace-nowrap"
+                            >Telefontokok</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="airpods.html"
+                            class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-blue-600 hover:border-blue-600 transition duration-300 whitespace-nowrap"
+                            >AirPods</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="container mx-auto px-6 max-w-4xl py-16">
+            <section class="text-center pb-16">
+                <h2
+                    class="text-5xl font-bold tracking-tight mb-6 leading-tight"
+                >
+                    Keresse meg álmai iPhone-ját vagy a tökéletes kiegészítőt!
+                </h2>
+                <p
+                    class="text-xl max-w-2xl mx-auto mb-10 leading-relaxed text-secondary opacity-90"
+                >
+                    Szakértelmünkkel és széles választékunkkal garantáljuk, hogy
+                    megtalálja a tökéletes Apple terméket. Minden termékünket
+                    alaposan ellenőrizzük, hogy csak a legjobb minőségű
+                    termékeket kínálhassuk Önnek.
+                </p>
+                <a
+                    href="hasznalt_telefonok.html"
+                    class="inline-block accent-bg text-lg font-semibold px-8 py-3 rounded-full accent-hover transform hover:-translate-y-0.5 transition duration-300 shadow-lg hover:shadow-xl"
+                    >Fedezze fel kínálatunkat!</a
+                >
+            </section>
+
+            <section class="pb-16">
+                <h2
+                    class="text-3xl font-semibold text-center mb-10 tracking-tight"
+                >
+                    Kiemelt ajánlataink
+                </h2>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center"
+                >
+                    <div
+                        class="rounded-xl bg-secondary shadow-sm p-8 flex flex-col items-center text-center"
+                    >
+                        <img
+                            src="https://lipsum.app/640x480/"
+                            alt="iPhone 14 Pro"
+                            class="w-48 h-48 object-contain mb-6 pb-6 border-b border-custom"
+                        />
+                        <h3 class="text-2xl font-semibold mb-2">
+                            iPhone 14 Pro (használt)
+                        </h3>
+                        <p class="text-base mb-4 flex-grow text-secondary">
+                            Kiváló állapot, 128GB, akkumulátor: 95%.
+                        </p>
+                        <span class="text-3xl font-bold accent mb-6 block"
+                            >289.990 Ft</span
+                        >
+                        <a
+                            href="hasznalt_telefonok.html"
+                            class="inline-block accent-bg font-medium px-6 py-3 rounded-full accent-hover transform hover:-translate-y-0.5 transition duration-300 shadow-md"
+                            >Részletek</a
+                        >
+                    </div>
+                    <div
+                        class="rounded-xl bg-secondary shadow-sm p-8 flex flex-col items-center text-center"
+                    >
+                        <img
+                            src="https://lipsum.app/640x480/"
+                            alt="AirPods Pro Gen 2"
+                            class="w-48 h-48 object-contain mb-6 pb-6 border-b border-custom"
+                        />
+                        <h3>AirPods Pro Gen 2</h3>
+                        <p class="text-base mb-4 flex-grow text-secondary">
+                            Aktív zajszűrés, átlátszó mód, újszerű állapot.
+                        </p>
+                        <span class="text-3xl font-bold accent mb-6 block"
+                            >74.990 Ft</span
+                        >
+                        <a
+                            href="airpods.html"
+                            class="inline-block accent-bg font-medium px-6 py-3 rounded-full accent-hover transform hover:-translate-y-0.5 transition duration-300 shadow-md"
+                            >Részletek</a
+                        >
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center py-10 mt-16 shadow-lg">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <p class="text-sm text-secondary opacity-80">
+                    &copy; 2025 iPhone Adás-Vétel. Minden jog fenntartva.
+                </p>
+            </div>
+        </footer>
+    </body>
 </html>

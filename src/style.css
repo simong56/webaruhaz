@@ -1,3 +1,7 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@media (prefers-color-scheme: dark) {
+  :root {
+    data-theme: dark;
+  }
+}
