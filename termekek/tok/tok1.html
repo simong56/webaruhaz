@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="hu" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MagSafe Szilikon Tok - TechTomi</title>
+    <link rel="stylesheet" href="../../src/style.css" />
+    <script>
+      // ha a böngésző sötét módot használ:
+      if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      ) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (e) => {
+          document.documentElement.setAttribute(
+            "data-theme",
+            e.matches ? "dark" : "light",
+          );
+        });
+    </script>
+  </head>
+  <body class="font-sans antialiased bg-bg-primary text-text-primary">
+    <header
+      class="py-6 text-center border-b border-text-secondary bg-bg-primary sticky top-0 z-50 shadow-sm"
+    >
+      <div class="container mx-auto px-6 max-w-4xl">
+        <h1 class="text-4xl font-bold tracking-tight mb-2">TechTomi</h1>
+        <p class="text-lg text-text-secondary opacity-90">
+          Minőségi használt iPhone-ok, kiegészítők és töltők egy helyen.
+        </p>
+      </div>
+    </header>
+
+    <nav class="border-b border-text-secondary py-3 shadow-sm">
+      <div class="container mx-auto px-6 max-w-4xl">
+        <ul class="flex justify-center flex-wrap gap-x-8 gap-y-2">
+          <li>
+            <a
+              href="../../index.html"
+              class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
+              >Főoldal</a
+            >
+          </li>
+          <li>
+            <a
+              href="../telefonok.html"
+              class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
+              >Használt iPhone-ok</a
+            >
+          </li>
+          <li>
+            <a
+              href="../toltok.html"
+              class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
+              >Töltők és Kábelek</a
+            >
+          </li>
+          <li>
+            <a
+              href="../tokok.html"
+              class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
+              >Telefontokok</a
+            >
+          </li>
+          <li>
+            <a
+              href="../airpods.html"
+              class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
+              >AirPods</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container mx-auto px-6 py-16">
+      <div class="bg-bg-secondary rounded-xl shadow-sm overflow-hidden">
+        <div class="flex flex-col md:flex-row">
+          <!-- kép -->
+          <div
+            class="md:w-1/2 p-8 flex items-center justify-center bg-bg-primary"
+          >
+            <img
+              id="product-image"
+              src="https://lipsum.app/640x480?text=Fekete"
+              alt="MagSafe Szilikon Tok"
+              class="w-full max-w-md h-auto object-contain"
+            />
+          </div>
+
+          <!-- részletek -->
+          <div class="md:w-1/2 p-8 flex flex-col justify-center">
+            <h2 class="text-3xl font-bold text-text-primary mb-4">
+              MagSafe Szilikon Tok
+            </h2>
+            <p class="text-text-secondary text-lg mb-6">
+              Kompatibilis iPhone 15 Pro modellekkel. MagSafe technológiával,
+              prémium szilikon anyagból.
+            </p>
+
+            <!-- Színválasztó -->
+            <div class="mb-6">
+              <p class="text-text-primary font-medium mb-3">Válasszon színt:</p>
+              <div class="flex gap-3 flex-wrap">
+                <button
+                  onclick="changeColor('black', 'Fekete')"
+                  class="w-10 h-10 bg-black rounded-full border-2 border-text-secondary hover:border-accent transition duration-300 focus:outline-none focus:ring-2 focus:ring-accent"
+                  title="Fekete"
+                ></button>
+                <button
+                  onclick="changeColor('white', 'Fehér')"
+                  class="w-10 h-10 bg-white rounded-full border-2 border-text-secondary hover:border-accent transition duration-300 focus:outline-none focus:ring-2 focus:ring-accent"
+                  title="Fehér"
+                ></button>
+                <button
+                  onclick="changeColor('blue', 'Kék')"
+                  class="w-10 h-10 bg-blue-300 rounded-full border-2 border-text-secondary hover:border-accent transition duration-300 focus:outline-none focus:ring-2 focus:ring-accent"
+                  title="Kék"
+                ></button>
+              </div>
+              <p id="selected-color" class="text-text-secondary text-sm mt-2">
+                Kiválasztott szín: Fekete
+              </p>
+            </div>
+
+            <div class="mb-8">
+              <span class="text-4xl font-bold text-accent">12.990 Ft</span>
+            </div>
+            <button
+              class="bg-accent text-white font-medium px-8 py-4 rounded-full transform hover:-translate-y-0.5 transition duration-300 shadow-md text-lg"
+            >
+              Kosárba teszem
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer
+      class="bg-secondary text-text-primary text-center py-10 mt-16 shadow-lg"
+    >
+      <div class="container mx-auto px-6 max-w-4xl">
+        <p class="text-sm text-text-secondary opacity-80">
+          &copy; 2025 TechTomi. Minden jog fenntartva.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      function changeColor(color, colorName) {
+        const image = document.getElementById("product-image");
+        const selectedColorText = document.getElementById("selected-color");
+
+        image.src = `https://lipsum.app/640x480?text=${colorName}`;
+        image.alt = `MagSafe Szilikon Tok - ${colorName}`;
+
+        selectedColorText.textContent = `Kiválasztott szín: ${colorName}`;
+
+        const buttons = document.querySelectorAll(
+          'button[onclick^="changeColor"]',
+        );
+        buttons.forEach((btn) => {
+          btn.classList.remove("ring-2", "ring-accent");
+        });
+        event.target.classList.add("ring-2", "ring-accent");
+      }
+    </script>
+  </body>
+</html>
