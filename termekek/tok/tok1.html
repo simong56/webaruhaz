@@ -86,7 +86,7 @@
           >
             <img
               id="product-image"
-              src="https://lipsum.app/640x480?text=Fekete"
+              src="Fekete-tok.png"
               alt="MagSafe Szilikon Tok"
               class="w-full max-w-md h-auto object-contain"
             />
@@ -98,8 +98,7 @@
               MagSafe Szilikon Tok
             </h2>
             <p class="text-text-secondary text-lg mb-6">
-              Kompatibilis iPhone 15 Pro modellekkel. MagSafe technológiával,
-              prémium szilikon anyagból.
+              Kompatibilis iPhone 11 -- iPhone 15 Pro modellekkel. MagSafe technológiával, prémium szilikon anyagból.
             </p>
 
             <!-- Színválasztó -->
@@ -155,7 +154,7 @@
         const image = document.getElementById("product-image");
         const selectedColorText = document.getElementById("selected-color");
 
-        image.src = `https://lipsum.app/640x480?text=${colorName}`;
+        image.src = `${colorName}-tok.png`;
         image.alt = `MagSafe Szilikon Tok - ${colorName}`;
 
         selectedColorText.textContent = `Kiválasztott szín: ${colorName}`;
