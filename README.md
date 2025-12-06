@@ -1,3 +1,5 @@
+# https://webaruhaz.pages.dev/
+## *vagy*
 # Futtatás
 > (node.js kell)
 1. `npm i`
