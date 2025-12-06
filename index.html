@@ -1,164 +1,159 @@
 <!doctype html>
 <html lang="hu">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>TechTomi - Prémium Használt Apple Termékek</title>
-        <link rel="stylesheet" href="src/style.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechTomi - Prémium Használt Apple Termékek</title>
+    <link rel="stylesheet" href="src/style.css" />
 
-        <script>
-            // ha a böngésző sötét módot használ:
-            if (
-                window.matchMedia &&
-                window.matchMedia("(prefers-color-scheme: dark)").matches
-            ) {
-                document.documentElement.setAttribute("data-theme", "dark");
-            }
-            window
-                .matchMedia("(prefers-color-scheme: dark)")
-                .addEventListener("change", (e) => {
-                    document.documentElement.setAttribute(
-                        "data-theme",
-                        e.matches ? "dark" : "light",
-                    );
-                });
-        </script>
-    </head>
-    <body class="font-sans antialiased bg-bg-primary text-text-primary">
-        <header
-            class="py-6 text-center border-b border-text-secondary bg-bg-primary sticky top-0 z-50 shadow-sm"
+    <script>
+      // ha a böngésző sötét módot használ:
+      if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      ) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (e) => {
+          document.documentElement.setAttribute(
+            "data-theme",
+            e.matches ? "dark" : "light",
+          );
+        });
+    </script>
+  </head>
+  <body class="font-sans antialiased bg-bg-primary text-text-primary">
+    <header
+      class="py-6 text-center border-b border-text-secondary bg-bg-primary sticky top-0 z-50 shadow-sm"
+    >
+      <div class="container mx-auto px-6 max-w-4xl">
+        <h1 class="text-4xl font-bold tracking-tight mb-2">TechTomi</h1>
+        <p class="text-lg text-text-secondary opacity-90">
+          Minőségi használt iPhone-ok, kiegészítők és töltők egy helyen.
+        </p>
+      </div>
+    </header>
+
+    <nav class="border-b border-text-secondary py-3 shadow-sm">
+      <div class="container mx-auto px-6 max-w-4xl">
+        <ul class="flex justify-center flex-wrap gap-x-8 gap-y-2">
+          <li>
+            <a
+              href="termekek/telefonok.html"
+              class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
+              >Használt iPhone-ok</a
+            >
+          </li>
+          <li>
+            <a
+              href="termekek/toltok.html"
+              class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
+              >Töltők és Kábelek</a
+            >
+          </li>
+          <li>
+            <a
+              href="termekek/tokok.html"
+              class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
+              >Telefontokok</a
+            >
+          </li>
+          <li>
+            <a
+              href="termekek/airpods.html"
+              class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
+              >AirPods</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container mx-auto px-6 max-w-4xl py-16">
+      <section class="text-center pb-16">
+        <h2 class="text-5xl font-bold tracking-tight mb-6 leading-tight">
+          Keresse meg álmai iPhone-ját vagy a tökéletes kiegészítőt!
+        </h2>
+        <p
+          class="text-xl max-w-2xl mx-auto mb-10 leading-relaxed text-text-secondary opacity-90"
         >
-            <div class="container mx-auto px-6 max-w-4xl">
-                <h1 class="text-4xl font-bold tracking-tight mb-2">
-                    TechTomi
-                </h1>
-                <p class="text-lg text-text-secondary opacity-90">
-                    Minőségi használt iPhone-ok, kiegészítők és töltők egy
-                    helyen.
-                </p>
-            </div>
-        </header>
+          Szakértelmünkkel és széles választékunkkal garantáljuk, hogy
+          megtalálja a tökéletes Apple terméket. Minden termékünket alaposan
+          ellenőrizzük, hogy csak a legjobb minőségű termékeket kínálhassuk
+          Önnek.
+        </p>
+        <a
+          href="termekek/telefonok.html"
+          class="inline-block bg-accent text-lg font-semibold px-8 py-3 rounded-full hover:bg-accent transform hover:-translate-y-0.5 transition duration-300 shadow-lg hover:shadow-xl"
+          >Fedezze fel kínálatunkat!</a
+        >
+      </section>
 
-        <nav class="border-b border-text-secondary py-3 shadow-sm">
-            <div class="container mx-auto px-6 max-w-4xl">
-                <ul class="flex justify-center flex-wrap gap-x-8 gap-y-2">
-                    <li>
-                        <a
-                            href="termekek/telefonok.html"
-                            class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
-                            >Használt iPhone-ok</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="termekek/toltok.html"
-                            class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
-                            >Töltők és Kábelek</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="termekek/tokok.html"
-                            class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
-                            >Telefontokok</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="termekek/airpods.html"
-                            class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
-                            >AirPods</a
-                        >
-                    </li>
-                </ul>
-            </div>
-        </nav>
+      <section class="pb-16">
+        <h2 class="text-3xl font-semibold text-center mb-10 tracking-tight">
+          Kiemelt ajánlataink
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center">
+          <div
+            class="rounded-xl bg-bg-secondary shadow-sm p-8 flex flex-col items-center text-center"
+          >
+            <img
+              src="termekek/iphone/iphone-14-pro.jpg"
+              alt="iPhone 14 Pro"
+              class="w-48 h-48 object-contain mb-6 pb-6 border-b border-text-secondary"
+            />
+            <h3 class="text-2xl font-semibold text-text-primary mb-2">
+              iPhone 14 Pro (használt)
+            </h3>
+            <p class="text-text-secondary text-base mb-4 grow">
+              Kiváló állapot, 128GB, akkumulátor: 95%.
+            </p>
+            <span class="text-3xl font-bold text-accent mb-6 block"
+              >289.990 Ft</span
+            >
+            <a
+              href="termekek/iphone/iphone-14-pro.html"
+              class="inline-block bg-accent text-white font-medium px-6 py-3 rounded-full transform hover:-translate-y-0.5 transition duration-300 shadow-md"
+              >Részletek</a
+            >
+          </div>
+          <div
+            class="rounded-xl bg-bg-secondary shadow-sm p-8 flex flex-col items-center text-center"
+          >
+            <img
+              src="termekek/airpods/airpods-pro-2.jpg"
+              alt="AirPods Pro Gen 2"
+              class="w-48 h-48 object-contain mb-6 pb-6 border-b border-text-secondary"
+            />
+            <h3 class="text-2xl font-semibold text-text-primary mb-2">
+              AirPods Pro Gen 2
+            </h3>
+            <p class="text-text-secondary text-base mb-4 grow">
+              Aktív zajszűrés, átlátszó mód, újszerű állapot.
+            </p>
+            <span class="text-3xl font-bold text-accent mb-6 block"
+              >74.990 Ft</span
+            >
+            <a
+              href="termekek/airpods/airpods-pro-2.html"
+              class="inline-block bg-accent text-white font-medium px-6 py-3 rounded-full transform hover:-translate-y-0.5 transition duration-300 shadow-md"
+              >Részletek</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
 
-        <main class="container mx-auto px-6 max-w-4xl py-16">
-            <section class="text-center pb-16">
-                <h2
-                    class="text-5xl font-bold tracking-tight mb-6 leading-tight"
-                >
-                    Keresse meg álmai iPhone-ját vagy a tökéletes kiegészítőt!
-                </h2>
-                <p
-                    class="text-xl max-w-2xl mx-auto mb-10 leading-relaxed text-text-secondary opacity-90"
-                >
-                    Szakértelmünkkel és széles választékunkkal garantáljuk, hogy
-                    megtalálja a tökéletes Apple terméket. Minden termékünket
-                    alaposan ellenőrizzük, hogy csak a legjobb minőségű
-                    termékeket kínálhassuk Önnek.
-                </p>
-                <a
-                    href="hasznalt_telefonok.html"
-                    class="inline-block bg-accent text-lg font-semibold px-8 py-3 rounded-full hover:bg-accent transform hover:-translate-y-0.5 transition duration-300 shadow-lg hover:shadow-xl"
-                    >Fedezze fel kínálatunkat!</a
-                >
-            </section>
-
-            <section class="pb-16">
-                <h2
-                    class="text-3xl font-semibold text-center mb-10 tracking-tight"
-                >
-                    Kiemelt ajánlataink
-                </h2>
-                <div
-                    class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center"
-                >
-                    <div
-                        class="rounded-xl bg-bg-secondary shadow-sm p-8 flex flex-col items-center text-center"
-                    >
-                        <img
-                            src="https://lipsum.app/640x480/"
-                            alt="iPhone 14 Pro"
-                            class="w-48 h-48 object-contain mb-6 pb-6 border-b border-text-secondary"
-                        />
-                        <h3 class="text-2xl font-semibold text-text-primary mb-2">
-                            iPhone 14 Pro (használt)
-                        </h3>
-                        <p class="text-text-secondary text-base mb-4 grow">
-                            Kiváló állapot, 128GB, akkumulátor: 95%.
-                        </p>
-                        <span class="text-3xl font-bold text-accent mb-6 block"
-                            >289.990 Ft</span
-                        >
-                        <a
-                    href="termekek/telefonok.html"
-                            class="inline-block bg-accent text-white font-medium px-6 py-3 rounded-full transform hover:-translate-y-0.5 transition duration-300 shadow-md"
-                            >Részletek</a
-                        >
-                    </div>
-                    <div
-                        class="rounded-xl bg-bg-secondary shadow-sm p-8 flex flex-col items-center text-center"
-                    >
-                        <img
-                            src="https://lipsum.app/640x480/"
-                            alt="AirPods Pro Gen 2"
-                            class="w-48 h-48 object-contain mb-6 pb-6 border-b border-text-secondary"
-                        />
-                        <h3>AirPods Pro Gen 2</h3>
-                        <p class="text-text-secondary text-base mb-4 grow">
-                            Aktív zajszűrés, átlátszó mód, újszerű állapot.
-                        </p>
-                        <span class="text-3xl font-bold text-accent mb-6 block"
-                            >74.990 Ft</span
-                        >
-                        <a
-                            href="termekek/airpods.html"
-                            class="inline-block bg-accent text-white font-medium px-6 py-3 rounded-full transform hover:-translate-y-0.5 transition duration-300 shadow-md"
-                            >Részletek</a
-                        >
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer class="bg-secondary text-text-primary text-center py-10 mt-16 shadow-lg">
-            <div class="container mx-auto px-6 max-w-4xl">
-                <p class="text-sm text-text-secondary opacity-80">
-                    &copy; 2025 TechTomi. Minden jog fenntartva.
-                </p>
-            </div>
-        </footer>
-    </body>
+    <footer
+      class="bg-secondary text-text-primary text-center py-10 mt-16 shadow-lg"
+    >
+      <div class="container mx-auto px-6 max-w-4xl">
+        <p class="text-sm text-text-secondary opacity-80">
+          &copy; 2025 TechTomi. Minden jog fenntartva.
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>

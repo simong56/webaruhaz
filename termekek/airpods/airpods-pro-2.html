@@ -1,96 +1,129 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hu" data-theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AirPods Pro 2 - TechTomi</title>
-    <link rel="stylesheet" href="../../src/style.css">
+    <link rel="stylesheet" href="../../src/style.css" />
     <script>
-        // ha a böngésző sötét módot használ:
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.documentElement.setAttribute('data-theme', 'dark');
-        }
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-            document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+      // ha a böngésző sötét módot használ:
+      if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      ) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (e) => {
+          document.documentElement.setAttribute(
+            "data-theme",
+            e.matches ? "dark" : "light",
+          );
         });
     </script>
-</head>
-<body class="font-sans antialiased bg-bg-primary text-text-primary">
-    <header class="bg-bg-primary text-text-primary py-6 text-center border-b border-text-secondary sticky top-0 z-50 shadow-sm">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <h1 class="text-4xl font-bold tracking-tight mb-2">AirPods Pro 2</h1>
-            <p class="text-lg text-text-secondary opacity-90">Fejlett zajszűrés és kivételes hangminőség</p>
-        </div>
+  </head>
+  <body class="font-sans antialiased bg-bg-primary text-text-primary">
+    <header
+      class="py-6 text-center border-b border-text-secondary bg-bg-primary sticky top-0 z-50 shadow-sm"
+    >
+      <div class="container mx-auto px-6 max-w-4xl">
+        <h1 class="text-4xl font-bold tracking-tight mb-2">TechTomi</h1>
+        <p class="text-lg text-text-secondary opacity-90">
+          Minőségi használt iPhone-ok, kiegészítők és töltők egy helyen.
+        </p>
+      </div>
     </header>
 
     <nav class="border-b border-text-secondary py-3 shadow-sm">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <ul class="flex justify-center flex-wrap gap-x-8 gap-y-2">
-                <li><a href="../../index.html" class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap">Főoldal</a></li>
-                <li>
-                    <a
-                        href="../telefonok.html"
-                        class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
-                        >Használt iPhone-ok</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="../toltok.html"
-                        class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
-                        >Töltők és Kábelek</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="../tokok.html"
-                        class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
-                        >Telefontokok</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="../airpods.html"
-                        class="text-lg font-normal py-2 border-b-2 border-accent text-accent transition duration-300 whitespace-nowrap"
-                        >AirPods</a
-                    >
-                </li>
-            </ul>
-        </div>
+      <div class="container mx-auto px-6 max-w-4xl">
+        <ul class="flex justify-center flex-wrap gap-x-8 gap-y-2">
+          <li>
+            <a
+              href="../../index.html"
+              class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
+              >Főoldal</a
+            >
+          </li>
+          <li>
+            <a
+              href="../telefonok.html"
+              class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
+              >Használt iPhone-ok</a
+            >
+          </li>
+          <li>
+            <a
+              href="../toltok.html"
+              class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
+              >Töltők és Kábelek</a
+            >
+          </li>
+          <li>
+            <a
+              href="../tokok.html"
+              class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
+              >Telefontokok</a
+            >
+          </li>
+          <li>
+            <a
+              href="../airpods.html"
+              class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
+              >AirPods</a
+            >
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <main class="container mx-auto px-6 max-w-4xl py-16">
-        <div class="bg-bg-secondary rounded-xl shadow-sm overflow-hidden">
-            <div class="flex flex-col md:flex-row">
-                <!-- kép -->
-                <div class="md:w-1/2 p-8 flex items-center justify-center bg-bg-primary">
-                    <img src="../../pumblix/airpodspro2-removebg-preview.png" alt="AirPods Pro 2" class="w-full max-w-md h-auto object-contain">
-                </div>
-                
-                <!-- részletek -->
-                <div class="md:w-1/2 p-8 flex flex-col justify-center">
-                    <h2 class="text-3xl font-bold text-text-primary mb-4">AirPods Pro 2</h2>
-                    <p class="text-text-secondary text-lg mb-6">
-                        Tapasztalja meg a kivételes hangzást és a fejlett zajszűrést az AirPods Pro 2-vel. 
-                        Az új H2 chipnek köszönhetően még jobb aktív zajszűrés, adaptív átláthatóság 
-                        és lenyűgöző térhangzás várja. A személyre szabott illeszkedés és a kényelmes 
-                        viselés garantálja a tökéletes zeneélményt.
-                    </p>
-                    <div class="mb-8">
-                        <span class="text-4xl font-bold text-accent">89.990 Ft</span>
-                    </div>
-                    <button class="bg-accent text-white font-medium px-8 py-4 rounded-full transform hover:-translate-y-0.5 transition duration-300 shadow-md text-lg">
-                        Kosárba teszem
-                    </button>
-                </div>
+      <div class="bg-bg-secondary rounded-xl shadow-sm overflow-hidden">
+        <div class="flex flex-col md:flex-row">
+          <!-- kép -->
+          <div
+            class="md:w-1/2 p-8 flex items-center justify-center bg-bg-primary"
+          >
+            <img
+              src="/termekek/airpods/airpods-pro-2.jpg"
+              alt="AirPods Pro 2"
+              class="w-full max-w-md h-auto object-contain"
+            />
+          </div>
+
+          <!-- részletek -->
+          <div class="md:w-1/2 p-8 flex flex-col justify-center">
+            <h2 class="text-3xl font-bold text-text-primary mb-4">
+              AirPods Pro 2
+            </h2>
+            <p class="text-text-secondary text-lg mb-6">
+              Tapasztalja meg a kivételes hangzást és a fejlett zajszűrést az
+              AirPods Pro 2-vel. Az új H2 chipnek köszönhetően még jobb aktív
+              zajszűrés, adaptív átláthatóság és lenyűgöző térhangzás várja. A
+              személyre szabott illeszkedés és a kényelmes viselés garantálja a
+              tökéletes zeneélményt.
+            </p>
+            <div class="mb-8">
+              <span class="text-4xl font-bold text-accent">89.990 Ft</span>
             </div>
+            <button
+              class="bg-accent text-white font-medium px-8 py-4 rounded-full transform hover:-translate-y-0.5 transition duration-300 shadow-md text-lg"
+            >
+              Kosárba teszem
+            </button>
+          </div>
         </div>
+      </div>
     </main>
 
-<footer class="bg-secondary text-text-primary text-center py-10 mt-16 shadow-lg">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <p class="text-sm text-text-secondary opacity-80">&copy; 2025 TechTomi. Minden jog fenntartva.</p>
-        </div>
+    <footer
+      class="bg-secondary text-text-primary text-center py-10 mt-16 shadow-lg"
+    >
+      <div class="container mx-auto px-6 max-w-4xl">
+        <p class="text-sm text-text-secondary opacity-80">
+          &copy; 2025 TechTomi. Minden jog fenntartva.
+        </p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
