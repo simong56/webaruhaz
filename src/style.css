@@ -20,3 +20,128 @@
     --color-accent: #E4572E;
 }
 
+/* --- KOSÁR --- */
+
+#cart-icon {
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  z-index: 60;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+#cart-icon span#cart-count {
+  font-weight: 600;
+}
+
+/* Panel */
+
+#cart-panel {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 260px;
+  height: calc(100vh - 80px);
+  background: #151318;
+  color: #f5f5f5;
+  padding: 16px 16px 20px;
+  font-size: 14px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.4);
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 999; /* ne takarja el a header */
+}
+
+
+#cart-panel h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#cart-close-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Lista */
+
+#cart-items {
+  flex: 1;
+  margin-top: 8px;
+  padding-right: 4px;
+  overflow-y: auto;
+}
+
+/* elemek */
+#cart-items > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+#cart-items > div > span:nth-child(1) {
+  /* terméknév */
+  font-weight: 500;
+}
+
+#cart-items > div > span:nth-child(2) {
+  /* ár */
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+/* Törlés gomb (X) */
+#cart-items button {
+  background: none;
+  border: none;
+  color: #ff6b6b;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 2px 4px;
+}
+
+/* Rendelés */
+
+#cart-total-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 8px;
+  margin-top: 4px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-weight: 500;
+}
+
+#cart-order-btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px 0;
+  border: none;
+  border-radius: 999px;
+  background: #ff6b32;             /* mehet az accent színed is, gabi vagyok ahh szoveg */
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#cart-order-btn:hover {
+  opacity: 0.9;
+}
