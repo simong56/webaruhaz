@@ -23,7 +23,27 @@
         });
     </script>
   </head>
+
   <body class="font-sans antialiased bg-bg-primary text-text-primary">
+    <!-- KOSÁR IKON + PANEL -->
+    <div id="cart-icon">
+      🛒 <span id="cart-count">0</span>
+    </div>
+
+    <div id="cart-panel">
+      <h2>
+        Kosár
+        <button id="cart-close-btn">✕</button>
+      </h2>
+      <div id="cart-items"></div>
+      <div id="cart-total-row">
+        <span>Összesen:</span>
+        <span id="cart-total">0 Ft</span>
+      </div>
+      <button id="cart-order-btn">Rendelés leadása</button>
+    </div>
+    <!-- /KOSÁR -->
+
     <header
       class="py-6 text-center border-b border-text-secondary bg-bg-primary sticky top-0 z-50 shadow-sm"
     >
@@ -102,6 +122,9 @@
             </div>
             <button
               class="bg-accent text-white font-medium px-8 py-4 rounded-full transform hover:-translate-y-0.5 transition duration-300 shadow-md text-lg"
+              data-add-to-cart
+              data-name="AirPods 4"
+              data-price="46990"
             >
               Kosárba teszem
             </button>
@@ -119,5 +142,7 @@
         </p>
       </div>
     </footer>
+
+    <script src="../../src/cart.js"></script>
   </body>
 </html>
