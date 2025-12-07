@@ -23,7 +23,27 @@
         });
     </script>
   </head>
+
   <body class="font-sans antialiased bg-bg-primary text-text-primary">
+    <!-- KOSÁR IKON + PANEL -->
+    <div id="cart-icon">
+      🛒 <span id="cart-count">0</span>
+    </div>
+
+    <div id="cart-panel">
+      <h2>
+        Kosár
+        <button id="cart-close-btn">✕</button>
+      </h2>
+      <div id="cart-items"></div>
+      <div id="cart-total-row">
+        <span>Összesen:</span>
+        <span id="cart-total">0 Ft</span>
+      </div>
+      <button id="cart-order-btn">Rendelés leadása</button>
+    </div>
+    <!-- /KOSÁR -->
+
     <header
       class="py-6 text-center border-b border-text-secondary bg-bg-primary sticky top-0 z-50 shadow-sm"
     >
@@ -85,7 +105,7 @@
             class="md:w-1/2 p-8 flex items-center justify-center bg-bg-primary"
           >
             <img
-              src="/termekek/iphone/iphone17.png"
+              src="/termekek/iphone/iphone16promax.png"
               alt="iPhone 15"
               class="w-full max-w-md h-auto object-contain"
             />
@@ -94,16 +114,19 @@
           <!-- részletek -->
           <div class="md:w-1/2 p-8 flex flex-col justify-center">
             <h2 class="text-3xl font-bold text-text-primary mb-4">
-              iPhone 17
+              iPhone 16 Pro Max
             </h2>
             <p class="text-text-secondary text-lg mb-6">
-              Kiváló állapot, 1T, akkumulátor: 93%   
+              Kiváló állapot, 512GB, akkumulátor: 99%  
             </p>
             <div class="mb-8">
-              <span class="text-4xl font-bold text-accent">359.999 Ft</span>
+              <span class="text-4xl font-bold text-accent">249.999 Ft</span>
             </div>
             <button
               class="bg-accent text-white font-medium px-8 py-4 rounded-full transform hover:-translate-y-0.5 transition duration-300 shadow-md text-lg"
+              data-add-to-cart
+              data-name="iPhone 16 Pro Max"
+              data-price="249999"
             >
               Kosárba teszem
             </button>
@@ -121,5 +144,7 @@
         </p>
       </div>
     </footer>
+
+    <script src="../../src/cart.js"></script>
   </body>
 </html>
