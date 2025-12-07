@@ -23,7 +23,27 @@
         });
     </script>
   </head>
+
   <body class="font-sans antialiased bg-bg-primary text-text-primary">
+    <!-- KOSÁR IKON + PANEL -->
+    <div id="cart-icon">
+      🛒 <span id="cart-count">0</span>
+    </div>
+
+    <div id="cart-panel">
+      <h2>
+        Kosár
+        <button id="cart-close-btn">✕</button>
+      </h2>
+      <div id="cart-items"></div>
+      <div id="cart-total-row">
+        <span>Összesen:</span>
+        <span id="cart-total">0 Ft</span>
+      </div>
+      <button id="cart-order-btn">Rendelés leadása</button>
+    </div>
+    <!-- /KOSÁR -->
+
     <header
       class="py-6 text-center border-b border-text-secondary bg-bg-primary sticky top-0 z-50 shadow-sm"
     >
@@ -110,6 +130,7 @@
             >Részletek</a
           >
         </div>
+
         <!-- Kábel usb-c -->
         <div
           class="bg-bg-secondary min-w-sm rounded-xl shadow-sm p-8 flex flex-col items-center text-center"
@@ -146,5 +167,7 @@
         </p>
       </div>
     </footer>
+
+    <script src="../src/cart.js"></script>
   </body>
 </html>
