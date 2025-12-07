@@ -14,6 +14,29 @@ document.addEventListener("DOMContentLoaded", function () {
     cartPanel.style.display = "none";
   }
 
+  function showNotification(message, isError = false) {
+    const notification = document.createElement("div");
+    notification.className = "popup-notification";
+    notification.textContent = message;
+
+    if (isError) {
+      notification.classList.add("error");
+    }
+
+    document.body.appendChild(notification);
+
+    setTimeout(() => {
+      notification.classList.add("show");
+    }, 10);
+
+    setTimeout(() => {
+      notification.classList.remove("show");
+      notification.addEventListener("transitionend", () => {
+        notification.remove();
+      });
+    }, 3000);
+  }
+
   function loadCart() {
     try {
       return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
@@ -73,10 +96,9 @@ document.addEventListener("DOMContentLoaded", function () {
     cart.push({ name, price });
     saveCart(cart);
     renderCart();
-    alert(name + " a kosárba került.");
+    showNotification(name + " a kosárba került.");
   }
 
-  // Kosár ikon / panel
   const icon = cartIcon;
   const panel = cartPanel;
   const closeBtn = cartCloseBtn;
@@ -98,16 +120,16 @@ document.addEventListener("DOMContentLoaded", function () {
     orderBtn.addEventListener("click", () => {
       const cart = loadCart();
       if (cart.length === 0) {
-        alert("A kosár üres, nincs mit megrendelni.");
+        showNotification("A kosár üres, nincs mit megrendelni.", true);
         return;
       }
-      alert("Sikeres megrendelés! Köszönjük a vásárlást.");
+      showNotification("Sikeres megrendelés! Köszönjük a vásárlást.");
       saveCart([]);
       renderCart();
+      cartPanel.style.display = "none";
     });
   }
 
-  // Törlés a kosárból
   const itemsEl = cartItemsContainer;
   if (itemsEl) {
     itemsEl.addEventListener("click", (e) => {
@@ -115,21 +137,22 @@ document.addEventListener("DOMContentLoaded", function () {
       if (target.classList.contains("cart-remove")) {
         const index = Number(target.getAttribute("data-index"));
         const cart = loadCart();
+        const removedItemName = cart[index] ? cart[index].name : "termék";
         cart.splice(index, 1);
         saveCart(cart);
         renderCart();
+        showNotification(`${removedItemName} eltávolítva a kosárból.`, true);
       }
     });
   }
 
-  // "Kosárba teszem" gombok
   const addButtons = document.querySelectorAll("[data-add-to-cart]");
   addButtons.forEach((btn) => {
     btn.addEventListener("click", function () {
       const name = this.dataset.name;
       const price = parseInt(this.dataset.price, 10) || 0;
       if (!name || !price) {
-        alert("Hiba: hiányzik a termék neve vagy ára.");
+        showNotification("Hiba: hiányzik a termék neve vagy ára.", true);
         return;
       }
       addItem(name, price);
