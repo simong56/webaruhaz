@@ -24,6 +24,25 @@
     </script>
   </head>
   <body class="font-sans antialiased bg-bg-primary text-text-primary">
+    <!-- KOSÁR IKON + PANEL -->
+    <div id="cart-icon">
+      🛒 <span id="cart-count">0</span>
+    </div>
+
+    <div id="cart-panel">
+      <h2>
+        Kosár
+        <button id="cart-close-btn">✕</button>
+      </h2>
+      <div id="cart-items"></div>
+      <div id="cart-total-row">
+        <span>Összesen:</span>
+        <span id="cart-total">0 Ft</span>
+      </div>
+      <button id="cart-order-btn">Rendelés leadása</button>
+    </div>
+    <!-- /KOSÁR -->
+
     <header
       class="py-6 text-center border-b border-text-secondary bg-bg-primary sticky top-0 z-50 shadow-sm"
     >
@@ -47,14 +66,14 @@
           <li>
             <a
               href="telefonok.html"
-              class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
+              class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover-border-accent transition duration-300 whitespace-nowrap"
               >Használt iPhone-ok</a
             >
           </li>
           <li>
             <a
               href="toltok.html"
-              class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
+              class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover-border-accent transition duration-300 whitespace-nowrap"
               >Töltők és Kábelek</a
             >
           </li>
@@ -68,7 +87,7 @@
           <li>
             <a
               href="airpods.html"
-              class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
+              class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover-border-accent transition duration-300 whitespace-nowrap"
               >AirPods</a
             >
           </li>
@@ -94,9 +113,16 @@
             alt="tok #1"
             class="w-48 h-48 object-contain mb-6 pb-6 border-b border-text-secondary"
           />
-          <h3 class="text-2xl font-semibold text-text-primary mb-2">MagSafe Telefontokok (Iphone)</h3>
-          <p class="text-text-secondary text-base mb-4 grow">Kompatibilis iPhone 11 -- iPhone 15 Pro modellekkel. MagSafe technológiával, prémium szilikon anyagból. </p>
-          <span class="text-3xl font-bold text-accent mb-6 block">12.999 Ft</span>
+          <h3 class="text-2xl font-semibold text-text-primary mb-2">
+            MagSafe Telefontokok (Iphone)
+          </h3>
+          <p class="text-text-secondary text-base mb-4 grow">
+            Kompatibilis iPhone 11 -- iPhone 15 Pro modellekkel. MagSafe
+            technológiával, prémium szilikon anyagból.
+          </p>
+          <span class="text-3xl font-bold text-accent mb-6 block"
+            >12.999 Ft</span
+          >
           <a
             href="/termekek/tok/tok1.html"
             class="inline-block bg-accent text-white font-medium px-6 py-3 rounded-full transform hover:-translate-y-0.5 transition duration-300 shadow-md"
@@ -115,5 +141,6 @@
         </p>
       </div>
     </footer>
+    <script src="../src/cart.js"></script>
   </body>
 </html>
