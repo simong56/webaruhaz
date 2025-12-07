@@ -3,30 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AirPods Pro 2 - TechTomi</title>
+    <title>Apple Töltőfej - TechTomi</title>
     <link rel="stylesheet" href="../../src/style.css" />
     <script>
-      // ha a böngésző sötét módot használ:
-      if (
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-      ) {
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
         document.documentElement.setAttribute("data-theme", "dark");
       }
-      window
-        .matchMedia("(prefers-color-scheme: dark)")
-        .addEventListener("change", (e) => {
-          document.documentElement.setAttribute(
-            "data-theme",
-            e.matches ? "dark" : "light",
-          );
-        });
+      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+        document.documentElement.setAttribute("data-theme", e.matches ? "dark" : "light");
+      });
     </script>
   </head>
+
   <body class="font-sans antialiased bg-bg-primary text-text-primary">
-    <header
-      class="py-6 text-center border-b border-text-secondary bg-bg-primary sticky top-0 z-50 shadow-sm"
-    >
+    <!-- KOSÁR IKON + PANEL -->
+    <div id="cart-icon">
+      🛒 <span id="cart-count">0</span>
+    </div>
+
+    <div id="cart-panel">
+      <h2>
+        Kosár
+        <button id="cart-close-btn">✕</button>
+      </h2>
+      <div id="cart-items"></div>
+      <div id="cart-total-row">
+        <span>Összesen:</span>
+        <span id="cart-total">0 Ft</span>
+      </div>
+      <button id="cart-order-btn">Rendelés leadása</button>
+    </div>
+    <!-- /KOSÁR -->
+
+    <header class="py-6 text-center border-b border-text-secondary bg-bg-primary sticky top-0 z-50 shadow-sm">
       <div class="container mx-auto px-6 max-w-4xl">
         <h1 class="text-4xl font-bold tracking-tight mb-2">TechTomi</h1>
         <p class="text-lg text-text-secondary opacity-90">
@@ -38,41 +47,11 @@
     <nav class="border-b border-text-secondary py-3 shadow-sm">
       <div class="container mx-auto px-6 max-w-4xl">
         <ul class="flex justify-center flex-wrap gap-x-8 gap-y-2">
-          <li>
-            <a
-              href="../../index.html"
-              class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
-              >Főoldal</a
-            >
-          </li>
-          <li>
-            <a
-              href="../telefonok.html"
-              class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
-              >Használt iPhone-ok</a
-            >
-          </li>
-          <li>
-            <a
-              href="../toltok.html"
-              class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
-              >Töltők és Kábelek</a
-            >
-          </li>
-          <li>
-            <a
-              href="../tokok.html"
-              class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
-              >Telefontokok</a
-            >
-          </li>
-          <li>
-            <a
-              href="../airpods.html"
-              class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
-              >AirPods</a
-            >
-          </li>
+          <li><a href="../../index.html" class="text-lg hover:text-accent">Főoldal</a></li>
+          <li><a href="../telefonok.html" class="text-lg hover:text-accent">Használt iPhone-ok</a></li>
+          <li><a href="../toltok.html" class="text-lg hover:text-accent">Töltők és Kábelek</a></li>
+          <li><a href="../tokok.html" class="text-lg hover:text-accent">Telefontokok</a></li>
+          <li><a href="../airpods.html" class="text-lg hover:text-accent">AirPods</a></li>
         </ul>
       </div>
     </nav>
@@ -80,44 +59,39 @@
     <main class="container mx-auto px-6 py-16">
       <div class="bg-bg-secondary rounded-xl shadow-sm overflow-hidden">
         <div class="flex flex-col md:flex-row">
-          <!-- kép -->
-          <div
-            class="md:w-1/2 p-8 flex items-center justify-center bg-bg-primary"
-          >
-            <img
-              src="/termekek/tolto/toltofej.png"
-              alt="AirPods 4"
-              class="w-full max-w-md h-auto object-contain"
-            />
+
+          <div class="md:w-1/2 p-8 flex items-center justify-center bg-bg-primary">
+            <img src="/termekek/tolto/toltofej.png" alt="Apple Töltőfej" class="w-full max-w-md h-auto object-contain" />
           </div>
 
-          <!-- részletek -->
           <div class="md:w-1/2 p-8 flex flex-col justify-center">
-            <h2 class="text-3xl font-bold text-text-primary mb-4"> Apple Töltőfej </h2>
-            <p class="text-text-secondary text-lg mb-6">
-              Teljesen új, eredeti, 20W
-            </p>
+            <h2 class="text-3xl font-bold text-text-primary mb-4">Apple Töltőfej</h2>
+            <p class="text-text-secondary text-lg mb-6">Teljesen új, eredeti, 20W</p>
+
             <div class="mb-8">
               <span class="text-4xl font-bold text-accent">10.990 Ft</span>
             </div>
+
             <button
               class="bg-accent text-white font-medium px-8 py-4 rounded-full transform hover:-translate-y-0.5 transition duration-300 shadow-md text-lg"
+              data-add-to-cart
+              data-name="Apple Töltőfej"
+              data-price="10990"
             >
               Kosárba teszem
             </button>
           </div>
+
         </div>
       </div>
     </main>
 
-    <footer
-      class="bg-secondary text-text-primary text-center py-10 mt-16 shadow-lg"
-    >
+    <footer class="bg-secondary text-text-primary text-center py-10 mt-16 shadow-lg">
       <div class="container mx-auto px-6 max-w-4xl">
-        <p class="text-sm text-text-secondary opacity-80">
-          &copy; 2025 TechTomi. Minden jog fenntartva.
-        </p>
+        <p class="text-sm text-text-secondary opacity-80">&copy; 2025 TechTomi. Minden jog fenntartva.</p>
       </div>
     </footer>
+
+    <script src="../../src/cart.js"></script>
   </body>
 </html>
