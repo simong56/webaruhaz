@@ -23,7 +23,27 @@
         });
     </script>
   </head>
+
   <body class="font-sans antialiased bg-bg-primary text-text-primary">
+    <!-- KOSÁR IKON + PANEL -->
+    <div id="cart-icon">
+      🛒 <span id="cart-count">0</span>
+    </div>
+
+    <div id="cart-panel">
+      <h2>
+        Kosár
+        <button id="cart-close-btn">✕</button>
+      </h2>
+      <div id="cart-items"></div>
+      <div id="cart-total-row">
+        <span>Összesen:</span>
+        <span id="cart-total">0 Ft</span>
+      </div>
+      <button id="cart-order-btn">Rendelés leadása</button>
+    </div>
+    <!-- /KOSÁR -->
+
     <header
       class="py-6 text-center border-b border-text-secondary bg-bg-primary sticky top-0 z-50 shadow-sm"
     >
@@ -62,14 +82,14 @@
           <li>
             <a
               href="../tokok.html"
-              class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
+              class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover-border-accent transition duration-300 whitespace-nowrap"
               >Telefontokok</a
             >
           </li>
           <li>
             <a
               href="../airpods.html"
-              class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover:border-accent transition duration-300 whitespace-nowrap"
+              class="text-lg font-normal py-2 border-b-2 border-transparent hover:text-accent hover-border-accent transition duration-300 whitespace-nowrap"
               >AirPods</a
             >
           </li>
@@ -102,11 +122,16 @@
             <div class="mb-8">
               <span class="text-4xl font-bold text-accent">149.999 Ft</span>
             </div>
+
             <button
               class="bg-accent text-white font-medium px-8 py-4 rounded-full transform hover:-translate-y-0.5 transition duration-300 shadow-md text-lg"
+              data-add-to-cart
+              data-name="iPhone 13 Zöld"
+              data-price="149999"
             >
               Kosárba teszem
             </button>
+
           </div>
         </div>
       </div>
@@ -121,5 +146,7 @@
         </p>
       </div>
     </footer>
+
+    <script src="../../src/cart.js"></script>
   </body>
 </html>
